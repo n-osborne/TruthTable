@@ -74,7 +74,7 @@ valuation PLEmpty arr = True
 valuation (PLAnd left right) arr = (valuation left arr) && (valuation right arr)
 valuation (PLOr left right) arr = (valuation left arr) || (valuation right arr)
 valuation (PLNot tree) arr = not (valuation tree arr)
-valuation (PLImpl left right) arr = (not (valuation right arr)) || (valuation left arr)
+valuation (PLImpl left right) arr = (not (valuation left arr)) || (valuation right arr)
 valuation (PLLeave name) arr = findBool name arr
   where findBool :: Sign -> [(Sign, Bool)] -> Bool
         findBool name (x:xs)
