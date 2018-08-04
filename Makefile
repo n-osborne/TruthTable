@@ -7,6 +7,7 @@ DC_OPT += -t "Truth Table"
 DC_OPT += --ignore-all-exports
 SRC = src/TruthTable/WellFormedFormula.hs
 SRC += src/TruthTable/PropLogTree.hs
+SRC += src/TruthTable/PropLogValuation.hs
 
 doc : doc_dir
 	$(DC) $(DC_OPT) $(SRC)
