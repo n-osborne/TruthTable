@@ -3,7 +3,7 @@ Module      : TruthTable.PropLogTree
 Description : This module build the tree corresponding to a given well formed formula
               of propositional logic.
 Copyright   : (c) Nicolas Osborne, 2018
-Licence     : GPL-3
+Licence     : BSD-3
 Maintainer  : nicolas.osborne@etu.univ-lille1.fr
 
 This module provides a modelisation of the well formed formulae of propositional

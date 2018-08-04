@@ -2,7 +2,7 @@
 Module      : TruthTable.PropLogValuations
 Description : This module compute the truth table.
 Copyright   : (c) Nicolas Osborne, 2018
-Licence     : GPL-3
+Licence     : BSD-3
 Maintainer   : nicolas.osborne@etu.univ-lille3.fr
 
 This module provides a function that computes the truth table and a predicate

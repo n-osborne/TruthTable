@@ -8,7 +8,7 @@ Maintainer  : nicolas.osborne@etu.univ-lille1.fr
 -}
 module Main where
 
-import Prelude
+import System.Environment
 import TruthTable.WellFormedFormula
 import TruthTable.PropLogTree
 import TruthTable.PropLogValuation
@@ -18,4 +18,4 @@ main = do
   if (length arg) /= 1
     then putStrLn "Error"
     else do (map putStrLn truthtable)
-              where truthtable = truthTable (buildTree (parsePL (head arg))) (truthValueArr (setOfNames (parsePL (head arg))) []) 
+              where truthtable = truthTable (fmap buildTree (parsePL (head arg))) (fmap truthValuesArr (fmap setOfNames (parsePL (head arg))) []) 

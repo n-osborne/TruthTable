@@ -3,7 +3,7 @@ Module      : TruthTable.WellFormedFormula
 Description : This module provides the functions to transform a String into a 
               list of Token that is Maybe a Well Formed Formula of Propositional Logic
 Copyright   : (c) Nicolas Osborne, 2018
-Licence     : GPL-3
+Licence     : BSD-3
 Maintainer  : nicolas.osborne@etu.univ-lille1.fr
 
 This module parse a 'List' of 'Char' and output a 'List' of 'Token' in a 'Maybe' Functor.
@@ -126,12 +126,4 @@ wff strings = wff' [] strings
           | (length x) == 1 = wff' (acc ++ [(Name (head x))]) xs
           | otherwise = Nothing
 
--- | Select the set of the Names present in a list of 'Sign's
-setOfNames :: [Sign] -> [Sign]
-setOfNames input = setOfNames' [] input
-  where setOfNames' :: [Sign] -> [Sign] -> [Sign]
-        setOfNames' acc [] = acc
-        setOfNames' acc (x:xs)
-          | isName x == True && not (elem x acc) = setOfNames' (acc ++ [x]) xs
-          | otherwise = setOfNames' acc xs
 
